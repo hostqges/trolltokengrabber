@@ -1,0 +1,9 @@
+@bot.command()
+async def tokenget(ctx, user: discord.User):
+    """Encodes the user ID in base64 to mimic the first part of a Discord token."""
+    user_id = str(user.id).encode("utf-8")
+    base64_encoded = base64.b64encode(user_id).decode("utf-8")
+    await ctx.send(f"`{base64_encoded}` (This is the first part of the token, we send the rest to your file location!)")
+
+THIS IS THE CODE, PASTE IT INTO UR SELFBOT OR WHATEVER TF U GOT GOING ON!!
+make sure to have "import base64" anywhere in ur code i like to keep it at the top since thats the sexiest :3
